@@ -1,0 +1,160 @@
+<html>
+    <head>
+        <title>Registration</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{
+                font-family: Arial;
+                background-image: url("https://t3.ftcdn.net/jpg/08/00/80/46/240_F_800804632_BVd5oRy4C7CCOwzWDk2BFSq2gwx8wigX.jpg");
+                background-size: cover;        /* full screen cover */
+                background-repeat: no-repeat;  /* repeat band */
+                background-position: center;   /* center image */
+            }
+
+            .container{
+                width: 320px;
+                /*background: #fff;*/
+                border-radius: 8px;
+                border: 1px solid #999;
+                /*box-shadow: 0 4px 12px rgba(0,0,0,0.15);*/
+                margin: auto;
+                margin-top: 5%;
+                margin-bottom: 5%;
+                padding: 25px;
+                background-color: white;
+            }
+
+            .container h3{
+                text-align: center;
+                color: #333;
+                margin-bottom: 20px;
+            }
+
+            label{
+                display: block;
+                margin-bottom: 5px;
+                font-weight: bold;
+                color: #444;
+            }
+
+            input, select{
+                width: 100%;
+                padding: 8px;
+                margin-bottom: 15px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                font-size: 14px;
+            }
+
+            input:focus, select:focus{
+                border-color: #216fdb;
+                outline: none;
+            }
+
+            #msg{
+                display: block;
+                margin-top: 5px;
+                font-size: 13px;
+            }
+
+            .three{
+                border-radius: 4px;
+                border: none;
+                padding: 7px;
+                width: 90px;
+                font-size: 17px;
+                cursor: pointer;
+            }
+
+            a{
+                display: block;
+                text-align: center;
+                color: #2c9117;
+                text-decoration: none;
+                font-weight: bold;
+                margin-top: 15px;
+            }
+
+            a:hover{
+                text-decoration: underline;
+            }
+
+            .back-btn{
+                margin-top: 0;
+                float: left;
+                color: white;
+                background-color: #216fdb;
+                border-radius: 8px;
+                border: 1px solid #999;
+                padding: 7px;
+                width: 75px;
+                font-weight: bold;
+                font-size: 17px;
+                cursor: pointer;
+                text-decoration: none;
+                text-align: center;
+            }
+
+            .back-btn:hover{
+                background-color: #5a6268;
+            }
+        </style>
+    </head>
+    <body>
+        <button type="button" onclick="window.location.href = 'index.html'" class="back-btn">Back</button>
+        <div class="container">
+        <h3>Create a New Account</h3>
+            <form action="Register" method="post" onsubmit="return valid()">
+
+                <label>Name</label>
+                <input type="text" name="username" placeholder="Enter name" required /><br>
+
+                <label>Email</label>
+                <input type="email" name="mail" placeholder="Enter email" required /><br>
+
+                <label>Mobile</label>
+                <input type="text" pattern="[6-9][0-9]{9}" name="mob" placeholder="Enter mobile number" required /><br>
+
+                <label>Password</label>
+                <input type="password" name="pwd" id="one" placeholder="Enter password" /><br>
+
+                <label>Confirm Password</label>
+                <input type="password" id="two" placeholder="Confirm password" /><br>
+
+                <span id="msg" style="color:red;"></span>
+
+                <label>City</label>
+                <select name="city">
+                    <option value="Khargone">Khargone</option>
+                    <option value="Indore" selected>Indore</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Pune">Pune</option>
+                </select><br>
+
+                <input class="three" type="submit" value="Sign up" style="background-color: #216fdb; color: white" />
+
+                <input class="three" type="reset" value="clear" style="background-color: #e8eaed; color: #4b5057; margin-left: 130px" />
+            </form>
+        </div>
+
+        <script>
+            function valid() {
+                let p1 = document.getElementById("one").value;
+                let p2 = document.getElementById("two").value;
+                let msg = document.getElementById("msg");
+
+                if ((p1 === "" || p2 === "")) {
+                    msg.innerHTML = "<div class='passwordmsg'>Password cannot be empty<br>Please try again!</div>";
+                    return false;
+                }
+                if (p1 === p2) {
+                    return true;
+                } else {
+                    msg.innerHTML = "<div class='passwordmsg'>Invalid password!</div><br>";
+                    return false;
+                }
+            }
+        </script>
+    </body>
+</html>

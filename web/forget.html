@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+
+            body{
+                margin-top: 10%;
+                font-family: Arial;
+                background-image: url("https://t3.ftcdn.net/jpg/08/00/80/46/240_F_800804632_BVd5oRy4C7CCOwzWDk2BFSq2gwx8wigX.jpg");
+                background-size: cover;        /* full screen cover */
+                background-repeat: no-repeat;  /* repeat band */
+                background-position: center;   /* center image */
+            }
+
+            .container{
+                margin: 0 auto;
+                width: 40%;
+                border: 1px solid #999;
+                border-radius: 5px;
+                padding: 15px;
+                background-color: white;
+            }
+
+            .one{
+                border-radius: 8px;
+                border: 1px solid #999;
+                padding: 12px;
+                margin-bottom: 10px;
+                width: 100%;
+                font-size: 17px;
+            }
+
+            .one:focus{
+                border-color: black;
+            }
+
+            .two{
+                text-align: right;
+            }
+
+            .three{
+                border-radius: 8px;
+                border: 1px solid #999;
+                padding: 7px;
+                width: 90px;
+                margin-left: 7px;
+                font-weight: bold;
+                font-size: 17px;
+                cursor: pointer;
+            }
+
+            .back-btn{
+                color: #4b4f6e;
+                background-color: #e8eaed;
+                border-radius: 8px;
+                border: 1px solid #999;
+                padding: 7px;
+                width: 90px;
+                font-weight: bold;
+                font-size: 17px;
+                cursor: pointer;
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h3 style="color: #162542">Update Your Password</h3><hr>
+            <p style="font-size: 17px">Please enter your email address to send link for password update.</p>
+            <form action="SendMail">
+                <input class="one" type="email" name="mail" placeholder="Enter email" required/><hr><br>
+                <div class="two">
+                    <button type="button" onclick="window.location.href = 'index.html'" class="back-btn">cancel</button>
+                    <input class="three" type="submit" value="send" style="background-color: #216fdb; color: white" />
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

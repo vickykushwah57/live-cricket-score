@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <title>Insert Future Match</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+
+            body{
+                font-family: Arial;
+                background-image: url("https://t4.ftcdn.net/jpg/05/81/30/43/240_F_581304355_O0snYxPgQbQxIi8DcZvGgTEszsiLVjG2.jpg");
+                background-size: cover;        /* full screen cover */
+                background-repeat: no-repeat;  /* repeat band */
+                background-position: center;   /* center image */
+            }
+
+            .container {
+                width: 320px;
+                margin:  auto;
+                padding: 25px;
+                border-radius: 8px;
+                border: 1px solid #999;
+                /*box-shadow: 0 0 10px rgba(0,0,0,0.1); */
+                background-color: white;
+            }
+
+            .container h2 {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .container input[type="date"],
+            .container input[type="time"],
+            .container input[type="text"] {
+                width: 100%;
+                padding: 8px;
+                margin-bottom: 15px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+
+            .container input[type="submit"] {
+                width: 100%;
+                padding: 8px;
+                background-color: #007bff;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+            .container input[type="submit"]:hover {
+                background-color: #0056b3;
+            }
+
+            .back-btn{
+                float: left;
+                color: white;
+                background-color: #216fdb;
+                border-radius: 8px;
+                border: 1px solid #999;
+                padding: 7px;
+                width: 75px;
+                font-weight: bold;
+                font-size: 17px;
+                cursor: pointer;
+                text-decoration: none;
+                text-align: center;
+            }
+
+            .back-btn:hover{
+                background-color: #5a6268;
+            }
+        </style>
+    </head>
+
+    <body>
+        <button type="button" onclick="window.location.href = 'AdminHome'" class="back-btn">Back</button>
+        <div class="container">
+            <h2>Add Future Match</h2>
+
+            <form action="InsertFutureMatch" method="post">
+                <input type="date" name="date" required>
+                <input type="time" name="time" required>
+                <input type="text" name="team1" placeholder="Name of Team 1" required>
+                <input type="text" name="team2" placeholder="Name of Team 2" required>
+                <input type="text" name="venue" placeholder="Enter Location" required>
+                <input type="submit" value="Add">
+            </form>
+        </div>
+    </body>
+</html>

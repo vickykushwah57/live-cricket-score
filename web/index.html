@@ -1,0 +1,110 @@
+<html>
+    <head>
+        <title>Online Cricket Score</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+
+            body{
+                font-family: Arial;
+                background-image: url("https://t3.ftcdn.net/jpg/08/00/80/46/240_F_800804632_BVd5oRy4C7CCOwzWDk2BFSq2gwx8wigX.jpg");
+                background-size: cover;        /* full screen cover */
+                background-repeat: no-repeat;  /* repeat band */
+                background-position: center;   /* center image */
+            }
+
+            .container{
+                border: 1px solid #999;
+                width: 320px;
+                padding: 20px;
+                margin: auto;
+                margin-top: 8%;
+                border-radius: 5px;
+                background-color: white;
+            }
+
+            .container h2{
+                margin-top: 2%;
+                text-align: center;
+                color: #1877F2;
+            }
+
+            .one{
+                border-radius: 5px;
+                border: 1px solid #ccc;
+                padding: 8px;
+                margin-bottom: 15px;
+                width: 100%;
+                font-size: 17px;
+            }
+
+            .one:focus {
+                border-color: blue;
+                outline: none;
+            }
+
+            .two{
+                padding: 8px;
+                background-color: #007bff;
+                border-radius: 5px;
+                color: white;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            .two:hover{
+                background-color: #0056b3;
+            }
+
+            .three{
+                display: block;
+                text-align: center;
+                text-decoration: none;
+                font-size: 15px;
+                margin-top: 10px;
+                color: #1877F2;
+            }
+
+            .three:hover{
+                text-decoration: underline;
+            }
+            .four{
+                display: block;
+                text-align: center;
+                text-decoration: none;
+                font-size: 15px;
+                margin-top: 10px;
+                color: #2c9117;
+            }
+
+            .four:hover{
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h2>Audience Login</h2>
+            <form action="CheckLogin" method="post">
+
+                <input class="one" type="email" name="mail" placeholder="Email" required />
+
+                <input class="one" type="password" name="pass" placeholder="Password" required />
+
+                <input class="two" type="submit" value="Log in" />
+
+                <a class="three" href="forget.html">Forgot Password?</a><hr>
+
+                <a class="four" href="register.html">Create New Account</a>
+
+            </form>
+            <a class="four" href='LiveScoreServlet'>Show Live Score</a>
+        </div>
+    </body>
+</html>

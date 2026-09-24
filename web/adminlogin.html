@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title>Online Cricket Score</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+
+            body{
+                font-family: Arial;
+                background-image: url("https://t3.ftcdn.net/jpg/02/62/39/66/240_F_262396638_TuvewmRPwWVlx4mjk6EqrJOZz23tsCmB.jpg");
+                background-size: cover;        /* full screen cover */
+                background-repeat: no-repeat;  /* repeat band */
+                background-position: center;   /* center image */
+            }
+            
+            .container{
+                border: 1px solid #999;
+                width: 320px;
+                padding: 20px;
+                margin: auto;
+                margin-top: 8%;
+                border-radius: 5px;
+                background-color: white;
+            }
+        
+            .container h2{
+                margin-top: 2%;
+                text-align: center;
+                color: #1877F2;
+            }
+            
+            .one{
+                border-radius: 5px;
+                border: 1px solid #ccc;
+                padding: 8px;
+                margin-bottom: 15px;
+                width: 100%;
+                font-size: 17px;
+            }
+            
+            .one:focus {
+                border-color: blue;
+                outline: none;
+            }
+            
+            .two{
+                padding: 8px;
+                background-color: #007bff;
+                border-radius: 5px;
+                color: white;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            .two:hover{
+                background-color: #0056b3;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+        <h2 id="login">Admin Login</h2>
+            <form action="AdminLogin" method="post">
+
+                <input class="one" type="email" name="mail" placeholder="Email" required />
+
+                <input class="one" type="password" name="pass" placeholder="Password" required />
+
+                <input class="two" type="submit" value="Log in" />
+            </form>
+        </div>
+    </body>
+</html>
